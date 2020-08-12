@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './myProfile.less';
+import './myProfile.css';
 
 class MyProfile extends Component {
 
@@ -47,10 +48,10 @@ class MyProfile extends Component {
   render() {
     return (
         <form onSubmit={this.handleSumbit}>
-          <h1>My Profile</h1>
+          <h1 className="title">My Profile</h1>
           <label htmlFor="name">
             <h4>Name</h4>
-            <input value={this.state.name} onChange={this.handleName} type="text"/>
+            <input id="name" value={this.state.name} onChange={this.handleName} type="text"/>
           </label>
           <label htmlFor="gender">
             <h4>Gender</h4>
