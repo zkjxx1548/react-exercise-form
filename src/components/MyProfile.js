@@ -8,7 +8,8 @@ class MyProfile extends Component {
     this.state = {
       name: 'Your name',
       gender: 'Male',
-      description: 'Description about yourself'
+      description: 'Description about yourself',
+      iKnow: false
     }
   }
 
@@ -27,6 +28,12 @@ class MyProfile extends Component {
   handleDescription = (event) => {
     this.setState({
       description: event.target.value
+    });
+  }
+
+  handleIknow = (event) => {
+    this.setState({
+      iKnow: event.target.checked
     });
   }
 
@@ -56,10 +63,17 @@ class MyProfile extends Component {
             <h4>Description</h4>
             <textarea value={this.state.description} onChange={this.handleDescription}></textarea>
           </label>
+          <label htmlFor="iKnow">
+            <div>
+              <input id="iKnow" onClick={this.handleIknow} type="checkbox" />
+              I have read the terms of conduct
+            </div>
+          </label>
           <button 
             disabled={
               this.state.name === 'Your name' 
-              || this.state.description === ''} 
+              || this.state.description === ''
+              || !this.state.iKnow} 
             type="submit" >Submit</button>
         </form>
     );
