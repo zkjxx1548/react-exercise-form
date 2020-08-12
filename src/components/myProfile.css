@@ -4,5 +4,43 @@ h1, h2, h3, h4 {
 }
 
 .title {
-  
+  margin-bottom: 30px;
+}
+
+.myProfile h4 {
+  margin: 10px 0 5px 0;
+}
+
+.input-inline {
+  padding: 8px 8px;
+  width: 100%;
+  color: rgb(102, 101, 101);
+  border: 0;
+}
+
+#description {
+  height: 150px;
+}
+
+#iKnowBtn {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
+}
+
+.iKnow {
+  display: flex;
+  margin: 15px 0;
+}
+
+.submit {
+  text-align: center;
+}
+
+.submitBtn {
+  border: 0;
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 35px;
 }

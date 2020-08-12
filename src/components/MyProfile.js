@@ -47,35 +47,37 @@ class MyProfile extends Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSumbit}>
+        <form className="myProfile" onSubmit={this.handleSumbit}>
           <h1 className="title">My Profile</h1>
           <label htmlFor="name">
             <h4>Name</h4>
-            <input id="name" value={this.state.name} onChange={this.handleName} type="text"/>
+            <input id="name " className="input-inline" value={this.state.name} onChange={this.handleName} type="text"/>
           </label>
           <label htmlFor="gender">
             <h4>Gender</h4>
-            <select onChange={this.handleGender}>
+            <select onChange={this.handleGender} className="input-inline">
               <option selected value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </label>
           <label htmlFor="description">
             <h4>Description</h4>
-            <textarea value={this.state.description} onChange={this.handleDescription}></textarea>
+            <textarea id="description" value={this.state.description} onChange={this.handleDescription} className="input-inline"></textarea>
           </label>
-          <label htmlFor="iKnow">
-            <div>
-              <input id="iKnow" onClick={this.handleIknow} type="checkbox" />
+          <label htmlFor="iKnowBtn">
+            <div className="iKnow">
+              <input id="iKnowBtn" onClick={this.handleIknow} type="checkbox" />
               I have read the terms of conduct
             </div>
-          </label>
-          <button 
-            disabled={
-              this.state.name === 'Your name' 
-              || this.state.description === ''
-              || !this.state.iKnow} 
-            type="submit" >Submit</button>
+          </label >
+          <div className="submit">
+            <button className = "submitBtn" 
+              disabled={
+                this.state.name === 'Your name' 
+                || this.state.description === ''
+                || !this.state.iKnow} 
+              type="submit" >Submit</button>
+          </div>
         </form>
     );
   }
